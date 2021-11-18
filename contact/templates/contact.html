@@ -1,0 +1,254 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="{% static 'styles/home.css'%}">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+ 
+   <title>Contact</title>
+</head>
+<body>
+ <nav class="navbar">
+   <div class="max-width">
+       <div class="logo"><img class="logo-image" src="{% static 'image/logo.png' %}" alt="logo"><a href="#home">Tech<span>Care</span></a></div>
+       <ul class="menu">
+           <li><a href="#blogs" class="menu-btn">BLOGS</a></li>
+           <li><a href="#contacts" class="menu-btn">CONTACTS</a></li>
+           <li><a href="#FAQs" class="menu-btn">FAQ</a></li>
+           <li><a href="" class="menu-btn login">LOGIN</a></li>
+       </ul>
+       <div class="menu-btn">
+           <i class="fas fa-bars"></i>
+       </div>
+   </div>
+</nav>
+<table  class="contact">
+ <tr>
+   <td>
+     <div>
+       <img style="margin-top: 50px;" src="https://cdni.iconscout.com/illustration/premium/thumb/contact-us-2739534-2283924.png" width="800px" height="700px"
+       alt="">     
+     </div>
+   </td>
+   <td>
+     <div class="call">
+        <h1 style=" margin-top:1px; font-size: 70px; font-weight:bolder; color:#112266;">Contact our Support and Sales Team</h1>
+        <p>Having questions or enquiries about TechCare, feel free to shoot us an email or call us. <br>We appreciate your feedback.</p>
+             </div>
+           </td>
+         </tr>
+        </table>
+        <hr>
+        <h1 style=" font-weight: bold; font-size: 45px;color: #112266; margin-left:13em; ">-Get in Touch-</h1>
+         
+         {% block content %}
+         
+        <table >
+          <tr>
+         
+            <td>
+              <div>
+             <div class="form">
+           
+               <form  id="theform" method="POST"  enctype="multipart/form-data"  >
+                <p style="color: #112266; font-size: 19px;"> Fill in the form to register:</p>
+                 {{ form.as_p }}
+                 {% csrf_token %}
+                  <button  type="submit"
+                   style="background-color: #112266;
+                   color: white;width: 100%;
+                   height: 40px;
+                    border-radius: 10px;
+                    font-family: 'Montserrat', sans-serif;
+                    font-size: 20px;
+                    font-weight: bold;">
+                    Submit</button>
+               </form>
+           </div>
+         </div>
+            </td>
+            <td>
+             <div>
+                <img style="margin-left: 100px;" src="https://www.stockspots.eu/wp-content/uploads/2019/10/contact-1.png" width="600px" height="400px" alt="">
+            </div>
+           
+          </td>
+            </tr>
+          </table>
+               <style>
+           
+                 select{
+                    width: 98%;
+                   font-family: 'Courier New', Courier, monospace;
+                    font-size: 15px;
+                    padding: 8px 10px;
+                    border-radius: 5px;
+                    outline: none;
+                    border: #112266;
+                    box-shadow: inset 6px 6px 6px #cecbd1, inset -6px -6px 6px white; 
+                   }
+                   .form{
+                     margin-top: 60px;
+                     margin-left: 60px;
+                     font-weight: bold;
+                     padding:10px;
+                     width:800px;
+                     height:auto;
+                     overflow:hidden;
+                     border-radius:10px;
+                     font-weight: bolder;
+                     font-family: 'Montserrat', sans-serif;
+                     box-shadow: 14px 14px 20px #cfcbd1, -14px -14px 20px white;
+           
+                    
+                   }
+           
+                   textarea{
+                     width: 98%;
+                     font-size: 15px;
+                     padding: 6px 10px;
+                     outline: none;
+                     border: #112266;
+                     border-radius: 5px;
+                     box-shadow: inset 6px 6px 6px #cfcbd1, inset -6px -6px 6px white;
+                   }
+                   input{
+                    width: 98%;
+                    outline: none;
+                    border: #112266;
+                    font-size: 15px;
+                    padding: 6px 10px;
+                    border-radius: 5px;
+                    font-weight: bold;
+                    border-radius: 10px;
+                    box-shadow: inset 6px 6px 6px #cfcbd1, inset -6px -6px 6px white;
+                  
+                }
+               
+                #nationality{
+                 background-color: white;
+                 width: 98.5%;
+           
+                }
+                .contact{
+                 margin: auto;
+                  margin-left: 60px;
+                }
+                .call{
+                  margin-right: 10px;
+                }
+                .footer {
+                    height: max-content;
+                    margin-top: 50px;
+                    left: 0;
+                    bottom: 0;
+                    width: 100%;
+                    background-color: #112266;;
+                    color: white;
+                  
+                 
+                  }
+               .footer-msg{
+                text-align: center;
+                color: white;
+                margin-top: 70px;
+               }
+               .ftr{
+                display: block;
+                padding: 20px;
+                padding-left: 150px;
+                border-spacing: 220px 1px ;
+               }
+               .ftr a{
+                   list-style: none;
+                   color: white;
+                   text-decoration: underline dotted white;
+
+           }
+           .ftr li{
+            list-style: none;
+            text-decoration: underline dotted white;
+            }
+           .icons {
+            
+            bottom: -109%;
+            left: 45%;
+            color: white;
+        }
+          
+          .icons span:not(:last-child) {
+            margin-right: 1rem;
+          }
+          
+          .icons span {
+            font-size: 2rem;
+            cursor: pointer;
+            transition: all 300ms ease-in-out;
+          }
+          
+          .icons span:hover {
+            color: #dd9a05;
+          }
+          
+               </style>
+           
+                   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+                   <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet"><link rel="preconnect" href="https://fonts.googleapis.com">
+                   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+                   <link href="https://fonts.googleapis.com/css2?family=Cinzel&family=Montserrat:wght@100&display=swap" rel="stylesheet">
+           {% endblock content %}
+          </div>
+          <div class="footer">
+              <table class="ftr">
+                  <tr>
+                      <td>
+                        <div class="company">
+                            <h1 style="font-size: 18px;">Our Company</h1>
+                            <ul>
+                                <a href="#"><li>About Us</li></a>
+                                <a href="#"><li>Blogs</li></a>
+                                <a href="#"><li>User Manual</li></a>
+                                <a href="#"><li>Get the App</li></a>
+                            </ul>
+                        </div>
+                      </td>
+                      <td>
+                        <h1 style="font-size: 18px;">Legal</h1>
+                        <ul>
+                            <a href="#"><li>Privacy Policy</li></a>
+                            <a href="#"><li>Terms & conditions</li></a>
+                            <a href="#"><li>Suppory</li></a>
+                            <a href="#"><li>FAQs</li></a>
+                        </ul>
+                      </td>
+                      <td>
+                        <h1 style="font-size: 18px;">Contact Information</h1>
+                        <ul>
+                           <li> <i class="fas fa-phone-square-alt"></i>    +254739 520 062</li>
+                          <li><i class="fas fa-envelope-open-text"></i>    
+                            techcarechw@gmail.com</li>
+                           <li><i class="fas fa-globe"></i>     www.techcare.co.ke</li>
+                            <li> <i class="fas fa-map-marker-alt"></i>    Karen,Nairobi</li>
+                        </ul>
+                      </td>
+                  </tr>
+              </table>
+
+              <div class="icons">
+                <p style="color: #dd9a05;">Connect with us</p>
+                <span><i class="fab fa-facebook-f"></i></span> 
+                <span><i class="fab fa-twitter"></i></span>
+                <span><i class="fab fa-instagram"></i></span>
+    
+              </div>
+           
+
+            <p class="footer-msg">Copyright © 2021 TechCare All rights reserved</p>
+          </div>
+          </body>
+          </html>
+          
+                                      
